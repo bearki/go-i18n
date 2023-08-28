@@ -1,4 +1,4 @@
-package languages
+package codes
 
 import (
 	"os"
@@ -77,7 +77,12 @@ func SetDefault(code Code) {
 // GetEnv 获取环境变量当前配置的语言环境，未配置环境变量时将返回默认语言编码
 func GetEnv() Code {
 	// 检查语言是否存在
-	code := Code(strings.ToLower(os.Getenv(Env)))
+	code := Code(strings.ToLower(os.Getenv(Env1)))
+	if _, ok := existMap[code]; ok {
+		return code
+	}
+	// 检查语言是否存在
+	code = Code(strings.ToLower(os.Getenv(Env2)))
 	if _, ok := existMap[code]; ok {
 		return code
 	}
