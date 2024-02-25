@@ -1,4 +1,4 @@
-package codes
+package goi18n
 
 // Code 语言编码
 type Code string

@@ -1,4 +1,4 @@
-package codes
+package goi18n
 
 import (
 	"os"
