@@ -4,10 +4,7 @@ package goi18n
 type Code string
 
 // 配置语言的环境变量
-const (
-	Env1 string = "GO_I18N_CODE"
-	Env2 string = "GO_LANGUAGE_CODE"
-)
+const Env string = "GO_I18N_CODE"
 
 const (
 	ZH_CN Code = "zh-cn" // 简体中文(中国)
